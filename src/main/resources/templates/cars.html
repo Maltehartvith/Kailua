@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/bag.jpg">
+<h1 style="text-align: center"> Biler Vrmm Vrmmm </h1>
+
+<table>
+
+    <thead>
+    <tr>
+        <th>Sportscar ID</th>
+        <th>Type of car</th>
+        <th>Car brand</th>
+        <th>Car model</th>
+        <th>Fuel type</th>
+        <th>Plate</th>
+        <th>Registration date yyyy/mm</th>
+        <th>KM driven</th>
+        <th>Type of gear</th>
+        <th>Amount of horsepower</th>
+        <!--th>Buttons</th -->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="sportCar: ${sportCars}">
+        <td th:text="${sportCar.sportCarID}"></td>
+        <td th:text="${sportCar.type}"></td>
+        <td th:text="${sportCar.brand}"></td>
+        <td th:text="${sportCar.model}"></td>
+        <td th:text="${sportCar.fuelType}"></td>
+        <td th:text="${sportCar.plate}"></td>
+        <td th:text="${sportCar.regYearAndMonth}"></td>
+        <td th:text="${sportCar.drivenKM}"></td>
+        <td th:text="${sportCar.gearType}"></td>
+        <td th:text="${sportCar.horsePower}"></td>
+
+        <td>
+            <a th:href="@{'/delete/'+${sportCar.sportCarID}}">
+                <button class="btn"> Delete sportscar</button>
+            </a>
+
+            <a th:href="@{'/update/'+${sportCar.sportCarID}}">
+                <button class="btn"> Update sportcar</button>
+            </a>
+        </td>
+    </tr>
+
+
+    </tbody>
+
+</table>
+    <form action="/createSportCar" method="get">
+        <button class="btn-create" id="btn-create">Create new car</button>
+    </form>
+</body>
+</html>

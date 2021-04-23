@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Family Cars</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/bag.jpg">
+<h1 style="text-align: center"> Biler Vrmm Vrmmm </h1>
+
+<table>
+
+    <thead>
+    <tr>
+        <th>Family car ID</th>
+        <th>Type of car</th>
+        <th>Car brand</th>
+        <th>Car model</th>
+        <th>Fuel type</th>
+        <th>Plate</th>
+        <th>Registration date yyyy/mm</th>
+        <th>KM driven</th>
+        <th>Type of gear</th>
+        <th>Aircondition availability</th>
+        <th>Cruise Control</th>
+        <th>Number of seats</th>
+
+        <!--th>Buttons</th -->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="familyCar: ${familyCars}">
+        <td th:text="${familyCar.familyCarID}"></td>
+        <td th:text="${familyCar.type}"></td>
+        <td th:text="${familyCar.brand}"></td>
+        <td th:text="${familyCar.model}"></td>
+        <td th:text="${familyCar.fuelType}"></td>
+        <td th:text="${familyCar.plate}"></td>
+        <td th:text="${familyCar.regYearAndMonth}"></td>
+        <td th:text="${familyCar.drivenKM}"></td>
+        <td th:text="${familyCar.gearType}"></td>
+        <td th:text="${familyCar.hasAirCon}"></td>
+        <td th:text="${familyCar.hasCC}"></td>
+        <td th:text="${familyCar.seatNumber}"></td>
+
+    </tr>
+
+    </tbody>
+
+</table>
+</body>
+</html>

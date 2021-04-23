@@ -1,0 +1,59 @@
+table{
+    border-collapse: collapse;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+th{
+    background-color: darkgrey;
+}
+
+td, th{
+    border: 1px solid lightcyan;
+    text-align: left;
+    padding: 3px
+}
+
+tr:nth-child(even) {
+    background-color: wheat;
+}
+
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+#h1 {
+    color: lightcoral;
+    font-size: 20px;
+    text-align: center;
+}
+
+#wrapperH1 {
+    width: 100%;
+    height: auto;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+}
+
+#wrapperTilMenu {
+    width: 40%;
+    height: 500px;
+    border: 2px solid cornflowerblue;
+    padding: 5px;
+    position: relative;
+    left: 30%;
+    background-color: lightcyan;
+}
+
+.btn {
+    border: 3px solid cornflowerblue;
+    padding: 5px;
+    text-align: center;
+}
+#btn-create{
+    background-color: seagreen;
+
+}
+

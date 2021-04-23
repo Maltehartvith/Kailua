@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update sportcar</title>
+</head>
+<body>
+<h1>Update Sport car</h1>
+
+    <h1>Edit sport car</h1>
+        <form action="/updateSportcar" method="post">
+            <label>Enter car type</label>
+            <input type="text" id="type" th:value="${SportCar.type}"/>
+            <label>Enter car brand</label>
+            <input type="text" id="brand" th:value="${SportCar.brand}"/>
+            <label>Enter car model</label>
+            <input type="text" id="model"  th:value="${SportCar.model}"/>
+            <label>Enter car fueltype</label>
+            <input type="text" id="fuelType" th:value="${SportCar.fuelType}"/>
+            <label>Enter the plate</label>
+            <input type="text" id="plate"  th:value="${SportCar.plate}"/>
+            <label>Enter Registration month and year MM/YYYY</label>
+            <input type="text" id="regYearAndMonth" th:value="${SportCar.regYearAndMonth}"/>
+            <label>Enter driven KM</label>
+            <input type="text" id="drivenKM" th:value="${SportCar.drivenKM}"/>
+            <label>Enter gear type</label>
+            <input type="text" id="gearType"  th:value="${SportCar.gearType}"/>
+            <label>Enter Horse powers</label>
+            <input type="text" id="horsePower" th:value="${SportCar.horsePower}" />
+            <input type="submit" value="Update car">
+        </form>
+
+
+</body>
+</html>

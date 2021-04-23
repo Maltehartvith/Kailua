@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body background="/bag.jpg">
+<h1 style="text-align: center"> Biler Vrmm Vrmmm </h1>
+
+<table>
+
+    <thead>
+    <tr>
+        <th>Luxurycar ID</th>
+        <th>Type of car</th>
+        <th>Car brand</th>
+        <th>Car model</th>
+        <th>Fuel type</th>
+        <th>Plate</th>
+        <th>Registration date yyyy/mm</th>
+        <th>KM driven</th>
+        <th>Type of gear</th>
+        <th>Aircon</th>
+        <th>Cruise Control</th>
+        <th>Interior</th>
+        <th>CMM (Engine size)</th>
+        <!--th>Buttons</th -->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="luxuryCar: ${luxuryCars}">
+        <td th:text="${luxuryCar.luxuryCarID}"></td>
+        <td th:text="${luxuryCar.type}"></td>
+        <td th:text="${luxuryCar.brand}"></td>
+        <td th:text="${luxuryCar.model}"></td>
+        <td th:text="${luxuryCar.fuelType}"></td>
+        <td th:text="${luxuryCar.plate}"></td>
+        <td th:text="${luxuryCar.regYearAndMonth}"></td>
+        <td th:text="${luxuryCar.drivenKM}"></td>
+        <td th:text="${luxuryCar.gearType}"></td>
+        <td th:text="${luxuryCar.hasAirCon}"></td>
+        <td th:text="${luxuryCar.hasCC}"></td>
+        <td th:text="${luxuryCar.interior}"></td>
+        <td th:text="${luxuryCar.CCM}"></td>
+
+    </tr>
+
+    </tbody>
+
+</table>
+</body>
+</html>

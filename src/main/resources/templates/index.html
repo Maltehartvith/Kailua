@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Virker det!?</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+
+    <style>
+        #h1 {
+            color: lightpink;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #wrapperH1 {
+            width: 100%;
+            height: auto;
+            border: 1px solid cornflowerblue;
+            background-color: cornflowerblue;
+        }
+
+        #wrapperTilMenu {
+            width: 40%;
+            height: 500px;
+            border: 2px solid cornflowerblue;
+            padding: 5px;
+            position: relative;
+            left: 30%;
+            background-color: lightcyan;
+        }
+
+        .btn {
+            border: 3px solid cornflowerblue;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<div id="wrapperH1">
+    <h1 id="h1"> Welcome to Kailua car rental.</h1>
+</div>
+
+
+<body background="/bag.jpg">
+
+<br/>
+
+<div id="wrapperTilMenu">
+    <h2 style="text-align: center">Please choose a function</h2>
+    <form action="/cars" method="get">
+        <input class="btn" type="submit" value="For sportscars click here">
+    </form>
+    <form action="/familyCars" method="get">
+        <input class="btn" type="submit" value="For familycars click here">
+    </form>
+    <form action="/luxuryCars" method="get">
+        <input class="btn" type="submit" value="For luxurycars click here">
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
